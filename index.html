@@ -2,138 +2,318 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignments Portal</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       background: #f9fafb;
-      margin: 20px;
       color: #1f2937;
     }
-    h1 {
+    .header {
+      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+      color: white;
+      padding: 20px;
       text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .subject-selector {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .subject-btn {
+      padding: 10px 24px;
+      font-size: 15px;
+      border: 2px solid white;
+      border-radius: 8px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+    }
+    .subject-btn:hover {
+      background: white;
       color: #2563eb;
     }
-    .buttons {
+    .subject-btn.active {
+      background: white;
+      color: #2563eb;
+    }
+    .week-buttons {
+      padding: 20px;
+      background: white;
+      border-bottom: 2px solid #e5e7eb;
+      display: none;
+    }
+    .week-buttons.active {
+      display: block;
+    }
+    .week-buttons h2 {
+      color: #374151;
+      margin-bottom: 12px;
+      font-size: 18px;
       text-align: center;
-      margin: 20px 0;
+    }
+    .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
       justify-content: center;
     }
     .buttons button {
-      padding: 10px 16px;
+      padding: 10px 20px;
       font-size: 14px;
       border: none;
       border-radius: 6px;
       background: #2563eb;
       color: white;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s;
+      font-weight: 500;
     }
     .buttons button:hover {
       background: #1e40af;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
     }
-    .frame-wrap {
-      max-width: 1100px;
+    .buttons button.active {
+      background: #1e40af;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    .content-container {
+      padding: 20px;
+      max-width: 1200px;
       margin: 0 auto;
+    }
+    .panel {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .panel-header {
+      background: #f3f4f6;
+      padding: 12px 16px;
+      border-bottom: 2px solid #e5e7eb;
+      font-weight: 600;
+      color: #374151;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .panel-content {
       position: relative;
+      min-height: 600px;
     }
     iframe {
       width: 100%;
-      height: 600px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #fff;
+      height: 100%;
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
     .fallback {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 600px;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #fef2f2;
-      border: 1px solid #fca5a5;
-      border-radius: 8px;
+      border: 2px dashed #fca5a5;
       color: #991b1b;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       text-align: center;
       padding: 20px;
-      box-sizing: border-box;
+      flex-direction: column;
+      gap: 10px;
     }
     .hint {
-      margin-top: 8px;
+      margin: 20px 20px 0;
       font-size: 13px;
       color: #6b7280;
       text-align: center;
+      font-style: italic;
     }
+    
     @media (max-width: 640px) {
-      iframe, .fallback { height: 480px; font-size: 16px; }
+      .header h1 {
+        font-size: 22px;
+      }
+      .subject-selector {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .subject-btn {
+        width: 100%;
+      }
+      .buttons button {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 100px;
+      }
+      .content-container {
+        padding: 10px;
+      }
+      .panel-content {
+        min-height: 450px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Assignments Portal</h1>
-
-  <div class="buttons">
-    <button onclick="loadWeek('week1.html')">Week 1</button>
-    <button onclick="loadWeek('week2.html')">Week 2</button>
-    <button onclick="loadWeek('week3.html')">Week 3</button>
-    <button onclick="loadWeek('week4.html')">Week 4</button>
-    <button onclick="loadWeek('week5.html')">Week 5</button>
-    <button onclick="loadWeek('week6.html')">Week 6</button>
-    <button onclick="loadWeek('week7.html')">Week 7</button>
-    <button onclick="loadWeek('week8.html')">Week 8</button>
+  <div class="header">
+    <h1>📚 Assignments Portal</h1>
+    <div class="subject-selector">
+      <button class="subject-btn active" onclick="switchSubject('AI')">AI: Constraint Satisfaction</button>
+      <button class="subject-btn" onclick="switchSubject('SoftSkill')">Soft Skill</button>
+    </div>
   </div>
 
-  <div class="frame-wrap">
-    <iframe id="contentFrame" title="Assignment content"></iframe>
-    <div id="fallback" class="fallback" style="display:none;">
-      ⚠️ This Assignment is not released Yet.
+  <div class="week-buttons active" id="AI-weeks">
+    <h2>Select Week</h2>
+    <div class="buttons">
+      <button onclick="loadWeek('AI', 1)">Week 1</button>
+      <button onclick="loadWeek('AI', 2)">Week 2</button>
+      <button onclick="loadWeek('AI', 3)">Week 3</button>
+      <button onclick="loadWeek('AI', 4)">Week 4</button>
+      <button onclick="loadWeek('AI', 5)">Week 5</button>
+      <button onclick="loadWeek('AI', 6)">Week 6</button>
+      <button onclick="loadWeek('AI', 7)">Week 7</button>
+      <button onclick="loadWeek('AI', 8)">Week 8</button>
     </div>
-    <div class="hint">Select a week to view assignments. If a page isn’t available, you’ll see a message above.</div>
+  </div>
+
+  <div class="week-buttons" id="SoftSkill-weeks">
+    <h2>Select Week</h2>
+    <div class="buttons">
+      <button onclick="loadWeek('SoftSkill', 1)">Week 1</button>
+      <button onclick="loadWeek('SoftSkill', 2)">Week 2</button>
+      <button onclick="loadWeek('SoftSkill', 3)">Week 3</button>
+      <button onclick="loadWeek('SoftSkill', 4)">Week 4</button>
+      <button onclick="loadWeek('SoftSkill', 5)">Week 5</button>
+      <button onclick="loadWeek('SoftSkill', 6)">Week 6</button>
+      <button onclick="loadWeek('SoftSkill', 7)">Week 7</button>
+      <button onclick="loadWeek('SoftSkill', 8)">Week 8</button>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="panel">
+      <div class="panel-header">
+        <span>📄 Assignment</span>
+        <span id="content-title">Select a week</span>
+      </div>
+      <div class="panel-content">
+        <iframe id="contentFrame" title="Assignment content"></iframe>
+        <div id="contentFallback" class="fallback" style="display:flex;">
+          <div>📋</div>
+          <div>Select a week to view the assignment</div>
+        </div>
+      </div>
+    </div>
+    <div class="hint">Select a subject and week above to view the assignment</div>
   </div>
 
   <script>
-    async function loadWeek(page) {
-      const frame = document.getElementById('contentFrame');
-      const fallback = document.getElementById('fallback');
+    let currentSubject = 'AI';
 
-      // Reset UI
+    function switchSubject(subject) {
+      currentSubject = subject;
+      
+      // Update subject buttons
+      document.querySelectorAll('.subject-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Update week buttons
+      document.querySelectorAll('.week-buttons').forEach(div => {
+        div.classList.remove('active');
+      });
+      document.getElementById(subject + '-weeks').classList.add('active');
+      
+      // Clear active week buttons
+      document.querySelectorAll('.buttons button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Reset panel
+      resetPanel();
+    }
+
+    function resetPanel() {
+      document.getElementById('contentFrame').src = 'about:blank';
+      document.getElementById('contentFallback').style.display = 'flex';
+      document.getElementById('content-title').textContent = 'Select a week';
+    }
+
+    async function loadWeek(subject, week) {
+      // Update active button
+      const buttons = document.getElementById(subject + '-weeks').querySelectorAll('button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      const page = `${subject}/Week${week}.html`;
+      
+      // Update title
+      document.getElementById('content-title').textContent = `Week ${week}`;
+      
+      // Load content
+      await loadContent(page);
+    }
+
+    async function loadContent(page) {
+      const frame = document.getElementById('contentFrame');
+      const fallback = document.getElementById('contentFallback');
+      
       fallback.style.display = 'none';
       frame.src = 'about:blank';
-
+      
       try {
         const res = await fetch(page, { method: 'GET', cache: 'no-cache' });
-
+        
         if (!res.ok) {
           showError();
           return;
         }
-
+        
         const text = await res.text();
         const normalized = text.trim().toLowerCase();
-
+        
         if (
           normalized.includes('cannot get') ||
           normalized.includes('not found') ||
-          normalized.includes('404') && !normalized.includes('<html')
+          (normalized.includes('404') && !normalized.includes('<html'))
         ) {
           showError();
           return;
         }
-
+        
         frame.src = page;
       } catch (err) {
         showError();
       }
-
+      
       function showError() {
+        fallback.innerHTML = `<div>⚠️</div><div>Assignment not available yet</div>`;
         fallback.style.display = 'flex';
         frame.src = 'about:blank';
       }
