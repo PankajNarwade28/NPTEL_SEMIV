@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validated CSP Assignment Answers</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1> AI: Constraint Satisfaction </h1> 
+  <h2>Assignment Solutions - Final Validation</h2>
+
+  <div class="question">
+    <h2>1. Which of the following statements are true for two constraint networks to be equivalent?</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">a)</span> Both networks must have the same set of variables</li>
+      <li><span class="label">b)</span> The sets of variables in both networks must have the same domains</li>
+      <li class="correct"><span class="label">c)</span> Both networks must have the same set of solutions</li>
+      <li class="correct"><span class="label">d)</span> Both networks may or may not have the same set of constraints</li>
+    </ul>
+    <span class="logic-note">Note: Equivalence requires identical variable sets and solution sets, but constraints can vary.</span>
+  </div>
+
+  <div class="question">
+    <h2>2. Identify which of the constraint networks (X, Y, Z) are equivalent:</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">a)</span> Z and X</li>
+      <li><span class="label">b)</span> Z and Y</li>
+      <li><span class="label">c)</span> X and Y</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>3. The equivalent-networks are equivalent because of which operation?</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">c)</span> composition</li>
+    </ul>
+    <span class="logic-note">Based on REVISE-3/PC-1 logic: $R_{ij} \leftarrow R_{ij} \cap \pi_{ij}(R_{ik} \bowtie D_k \bowtie R_{kj})$.</span>
+  </div>
+
+  <div class="question">
+    <h2>4. The number of solutions for the constraint Z network are:</h2>
+    <p class="correct">Answer: 1</p>
+  </div>
+
+  <div class="question">
+    <h2>5. The solution(s) of the constraint network Y is:</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">a)</span> (red, red, blue, blue)</li>
+      <li class="correct"><span class="label">b)</span> (blue, blue, red, red)</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>6. The number of solutions of the projection network P(&rho;) is:</h2>
+    <p class="correct">Answer: 5</p>
+  </div>
+
+  <div class="question">
+    <h2>7. Which tuple(s) will be present in the solution of the projection network P(&rho;)?</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">d)</span> (b,a,b)</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>8-12. Map Colouring: Final domains after Arc Consistency?</h2>
+    <p><strong>8) Region A:</strong> <span class="correct">blue</span></p><br>
+    <p><strong>9) Region B:</strong> <span class="correct">green</span></p><br>
+    <p><strong>10) Region C:</strong> <span class="correct">red</span></p><br>
+    <p><strong>11) Region D:</strong> <span class="correct">blue</span></p><br>
+    <p><strong>12) Region E:</strong> <span class="correct">red</span></p><br>
+  </div>
+
+  <div class="question">
+    <h2>13. Does Arc consistency result in only one value in each domain, which is the only solution?</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">a)</span> Yes</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>14. How many solutions are possible for this Map Colouring CSP?</h2>
+    <p class="correct">Answer: 1</p>
+  </div>
+
+  <div class="question">
+    <h2>15. In the algorithm AC-3, which statement is true?</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">c)</span> In some cycle of the algorithm some edges may not be visited</li>
+    </ul>
+    <span class="logic-note">Logic: Based on the REVISE logic, arcs are only re-queued if a domain is modified.</span>
+  </div>
+
+  <footer>
+    <p>Reference: Verified against NPTEL Week 3 Algorithms and Assignment 2 screenshots.</p>
+  </footer>
+</body>
+</html>
