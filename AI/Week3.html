@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSP Week 3 Assignment Answers</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1> AI : Constraint Satisfaction </h1> <h2>Week 3: Assignment 3</h2>
+
+  <div class="question">
+    <h2>1. A backtrack-free search algorithm can solve a CSP without encountering any __________.</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">a)</span> Dead-ends</li>
+      <li><span class="label">b)</span> Jumps</li>
+      <li><span class="label">c)</span> Branching</li>
+      <li><span class="label">d)</span> None of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>2. Which of the following statements are true?</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">a)</span> A constraint problem can avoid dead-ends by making its representation more explicit by inference.</li>
+      <li><span class="label">b)</span> Constraint propagation is not a local operation.</li>
+      <li><span class="label">c)</span> An Arc consistent network is a path-consistent network.</li>
+      <li class="correct"><span class="label">d)</span> A good ordering means the constraint variable has fewer parents, which means fewer constraints on the possible values of the variable.</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>3. The Revise-3 algorithm __________.</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> does not prune the domains of three variables</li>
+      <li><span class="label">b)</span> prunes the domains of three variables one after the other sequentially</li>
+      <li><span class="label">c)</span> always adds a new binary constraint to the constraint graph</li>
+      <li class="correct"><span class="label">d)</span> may delete an edge (prune a relation) in the matching diagram</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>4. Which of the following orderings could be produced by the Min-Width ordering algorithm?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> A, B, C, D, E</li>
+      <li><span class="label">b)</span> D, A, B, C, E</li>
+      <li><span class="label">c)</span> D, B, C, A, E</li>
+      <li class="correct"><span class="label">d)</span> All of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>5. Which of the following orderings could be produced by the Min-Fill-Width ordering algorithm?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> A, C, D, B, E</li>
+      <li><span class="label">b)</span> C, D, A, B, E</li>
+      <li><span class="label">c)</span> B, C, D, A, E</li>
+      <li class="correct"><span class="label">d)</span> B, A, E, D, C</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>6. What are the colours in the domain of region A after directional arc consistency (DAC) is achieved?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> r</li>
+      <li><span class="label">b)</span> b</li>
+      <li class="correct"><span class="label">c)</span> g</li>
+      <li><span class="label">d)</span> none of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>7. What are the colours in the domain of region B after directional arc consistency (DAC) is achieved?</h2>
+    <ul class="options">
+      <li class="correct"><span class="label">a)</span> r</li>
+      <li><span class="label">b)</span> b</li>
+      <li><span class="label">c)</span> g</li>
+      <li><span class="label">d)</span> none of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>8. What are the colours in the domain of region C after directional arc consistency (DAC) is achieved?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> r</li>
+      <li class="correct"><span class="label">b)</span> b</li>
+      <li><span class="label">c)</span> g</li>
+      <li><span class="label">d)</span> none of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>9. What are the colours in the domain of region D after directional arc consistency (DAC) is achieved?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> r</li>
+      <li><span class="label">b)</span> b</li>
+      <li class="correct"><span class="label">c)</span> g</li>
+      <li><span class="label">d)</span> none of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>10. Which of the following edges are present in the matching diagram of the relation R<sub>AB</sub> after executing the DPC algorithm on the original CSP?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> (b,b)</li>
+      <li class="correct"><span class="label">b)</span> (b,r)</li>
+      <li class="correct"><span class="label">c)</span> (b,g)</li>
+      <li><span class="label">d)</span> (g,g)</li>
+      <li class="correct"><span class="label">e)</span> (g,r)</li>
+      <li><span class="label">f)</span> (g,b)</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>11. Which of the following edges are present in the matching diagram of the relation R<sub>BC</sub> after executing the DPC algorithm on the original CSP?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> (r,r)</li>
+      <li class="correct"><span class="label">b)</span> (r,b)</li>
+      <li><span class="label">c)</span> (r,g)</li>
+      <li><span class="label">d)</span> (b,b)</li>
+      <li><span class="label">e)</span> (b,r)</li>
+      <li><span class="label">f)</span> (b,g)</li>
+      <li><span class="label">g)</span> (g,g)</li>
+      <li class="correct"><span class="label">h)</span> (g,r)</li>
+      <li class="correct"><span class="label">i)</span> (g,b)</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>12. Which of the following edges are present in the matching diagram of the relation R<sub>BD</sub> after executing the DPC algorithm on the original CSP?</h2>
+    <ul class="options">
+      <li><span class="label">a)</span> (r,r)</li>
+      <li class="correct"><span class="label">b)</span> (r,g)</li>
+      <li><span class="label">c)</span> (g,g)</li>
+      <li class="correct"><span class="label">d)</span> (g,r)</li>
+      <li><span class="label">e)</span> (g,b)</li>
+    </ul>
+  </div>
+
+  <footer class="disclaimer">
+    <p>Disclaimer: Use at your own risk. All the questions and answers are researched and compiled using online resources and may be incorrect in some cases.</p>
+  </footer>
+</body>
+</html>
