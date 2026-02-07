@@ -309,6 +309,7 @@
         
         frame.src = page;
       } catch (err) {
+        console.error('Error loading content:', err); 
         showError();
       }
       
