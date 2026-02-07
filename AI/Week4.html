@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validated CSP Assignment Answers</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1> Constraint Satisfaction Problems </h1> 
+  <h2> Week 4: Assignments - Answer Key </h2>
+
+  <div class="question">
+    <h2>1) Adaptive consistency algorithm may enforce __________ on a constraint network.</h2>
+     <ul class="options">
+      <li class="correct">All of them. It may pick either of the three for each variable depending on the number of parents based on the ordering.</li>
+      <li>arc consistency</li>
+      <li>node consistency</li>
+      <li>path consistency</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>2) A constraint network R with ordering d has w*(d)=i. Then applying adaptive consistency is identical to applying __________ along d.</h2>
+     <ul class="options">
+      <li class="correct">strong directional (i+1)-consistency</li>
+      <li>directional i-consistency</li>
+      <li>strong (i+1)-consistency</li>
+      <li>directional (i+1)-consistency</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>3) Chronological backtracking in depth first search algorithm __________.</h2>
+     <ul class="options">
+      <li class="correct">does not learn from past dead-ends</li>
+      <li>implies that the algorithm backtracks to a variable that with a new value will guarantee a solution to the CSP</li>
+      <li>ensures that the algorithm will never miss a solution</li>
+      <li>implies that the algorithm may miss a solution for some variable orderings</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>4) In the Backtracking algorithm (without lookahead), which of the following are true?</h2>
+     <ul class="options">
+      <li class="correct">When Select-Value finds no value for the current variable, then a dead-end has occurred.</li>
+      <li>Select-Value will select a value for current variable consistent with current partial instantiation and future variables.</li>
+      <li>On reaching a dead end, the last variable value is changed to another value from its domain.</li>
+      <li>If Select-Value finds no value for the current variable, the algorithm terminates as no solution can be found.</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>5) Performance of CSP algorithm depends on __________.</h2>
+     <ul class="options">
+      <li class="correct">the size of search space to be explored</li>
+      <li class="correct">the level of local consistency enforced during search</li>
+      <li class="correct">the order of variable instantiation</li>
+      <li class="correct">the control strategy of the algorithm, i.e., the part of tree which shall be visited during the run</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="question">
+    <h2>6) After buckets are initialized, what are the constraints in bucket C?</h2>
+     <ul class="options">
+      <li class="correct">C ≠ A</li>
+      <li class="correct">C ≠ G</li>
+      <li>C ≠ D</li>
+      <li>None</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>7) When Bucket D is processed which constraint is created?</h2>
+     <ul class="options">
+      <li class="correct">R_BE</li>
+      <li>R_DE</li>
+      <li>R_EF</li>
+      <li>R_EB</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>8) After Bucket D is processed, the generated constraint is added to bucket ________.</h2>
+     <ul class="options">
+      <li class="correct">E</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>9) In the solution relation ρ which color(s) are permitted for A?</h2>
+     <ul class="options">
+      <li class="correct">r</li>
+      <li class="correct">b</li>
+      <li class="correct">g</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>10) In the solution relation ρ which color(s) are permitted for G?</h2>
+     <ul class="options">
+      <li class="correct">r</li>
+      <li class="correct">b</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>11) In the solution relation ρ which color(s) are permitted for B?</h2>
+     <ul class="options">
+      <li>r</li>
+      <li class="correct">b</li>
+      <li class="correct">g</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="question">
+    <h2>12) In the solution relation ρ which color(s) are permitted for F?</h2>
+     <ul class="options">
+      <li class="correct">r</li>
+      <li class="correct">b</li>
+      <li class="correct">g</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>13) How many total solutions are possible?</h2>
+     <ul class="options">
+      <li class="correct">12</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>14) If the algorithm chooses initial assignment {F = r}, how many values are pruned till first solution is found or first backtracking happens?</h2>
+     <ul class="options">
+      <li class="correct">5</li>
+    </ul>
+    <blockquote>
+      <em>Trace: Assign F=r. Assign B=b (prunes D:b, A:b). Assign E=b (prunes D:b - already pruned, G:b). Assign D=r (prunes A:r, G:r). G is now empty. Pruned: {D:b, A:b, G:b, A:r, G:r} = 5 values.</em>
+    </blockquote>
+  </div>
+
+  <div class="question">
+    <h2>15) Continuing from the above question. Domain of which variable becomes empty which leads to backtracking?</h2>
+     <ul class="options">
+      <li>D</li>
+      <li class="correct">G</li>
+      <li>E</li>
+      <li>None of the above</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Reference: Based on NPTEL Week 4 CSP Assignment (Rina Dechter, Constraint Processing).</p>
+  </footer>
+</body>
+</html>
