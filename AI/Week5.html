@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validated CSP Assignment Answers</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1> AI : Constraint Satisfaction </h1> 
+  <h2>Week 5: Assignment 5</h2>
+     <div class="question">
+    <h2>1) A network R is said to be backtrack-free along ordering d, if every __________ in the corresponding search tree is __________.</h2>
+    <ul class="options">
+      <li class="correct">parent node</li>
+      <li>leaf node</li>
+      <li>fully connected</li>
+      <li class="correct">a solution</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>2) Backtracking may rediscover the same inconsistencies repeatedly. This behavior is known as __________.</h2>
+    <ul class="options">
+      <li class="correct">thrashing</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>3) Which of the following schemes are used for improving the backtracking algorithm __________.</h2>
+    <ul class="options">
+      <li>back-jumping</li>
+      <li>constraint recording and learning</li>
+      <li>forward constraint propagation (lookahead)</li>
+      <li class="correct">All of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>4) Which of the following statements is/are true?</h2>
+    <ul class="options">
+      <li>Backmarking algorithm does not perform consistency checks.</li>
+      <li class="correct">Backmarking algorithm uses memorization techniques to prune the search space.</li>
+      <li class="correct">Backmarking algorithm learns and remembers some combinations of variable-values from the past.</li>
+      <li class="correct">Backmarking algorithm assumes an order of processing of constraints.</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>5) In the algorithm Backmarking, the parameter low<sub>i</sub> __________.</h2>
+    <ul class="options">
+      <li>corresponds to an element in a table maintained by the algorithm</li>
+      <li class="correct">marks the earliest prior variable x<sub>p</sub>, such that partial instantiation conflicted with x<sub>i</sub> = a</li>
+      <li class="correct">is the index of the earliest variable that changed since the last time x<sub>i</sub> was instantiated</li>
+      <li>If M<sub>iv</sub> is less than low<sub>i</sub> then the algorithm concludes that the variable pointed by M<sub>iv</sub> has changed, so enforcing further consistency checks</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>6) The algorithm starts iteration 1 with initial assignment {A=r}. Which element from D_C will be selected by Select-Value-Backmarking procedure and assigned to C?</h2>
+    <ul class="options">
+      <li>r</li>
+      <li class="correct">b</li>
+      <li>g</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>7) What is the value of low₃?</h2>
+    <ul class="options">
+      <li class="correct">1</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>8) What is the value of M₃,r?</h2>
+    <ul class="options">
+      <li class="correct">1</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>9) Run the algorithm until you reach variable G. What is the value of low₅?</h2>
+    <ul class="options">
+      <li class="correct">1</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>10) Variable G is being processed by the algorithm. What is returned by Select-Value-Backmarking procedure that is assigned to G?</h2>
+    <ul class="options">
+      <li>r</li>
+      <li>b</li>
+      <li>g</li>
+      <li class="correct">Null</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>11) What is the value of low₇?</h2>
+    <ul class="options">
+      <li class="correct">1</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>12) Continue the algorithm, consider the instance where G is being explored again for assignment. How many values from D_G are considered in the Select-Value-Backmarking procedure?</h2>
+    <ul class="options">
+      <li class="correct">0</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>13) What is the value of M₆,b?</h2>
+    <ul class="options">
+      <li class="correct">2</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div class="question">
+    <h2>14) The algorithm continues to run and reaches a point where low₃ is updated. What is the value of low₃?</h2>
+    <ul class="options">
+      <li class="correct">2</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>15) Which of the following statements is/are true?</h2>
+    <ul class="options">
+      <li>Value of the low table remains constant after the first iteration of run.</li>
+      <li class="correct">Value of low₄ changes from 0 to 3 during the algorithm run.</li>
+      <li class="correct">Algorithm exhibits thrashing behavior during some of the iterations.</li>
+      <li class="correct">Value of entries in M table remain constant for a given ordering.</li>
+      <li>Value of entries in M table remain constant irrespective of given ordering.</li>
+      <li class="correct">The Backmarking algorithm performs pruning of the space, therefore requires extra space for bookkeeping via M and Low tables.</li>
+      <li class="correct">Extra space requirement of the Backmarking algorithm is O(k·n) where k is the number of variables and n is the number of values.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Reference: Based on NPTEL Week 5 CSP Assignment (Rina Dechter, Constraint Processing).</p>
+  </footer>
+</body>
+</html>
