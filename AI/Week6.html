@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validated CSP Assignment Answers - Week 6</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1> AI: Constraint Satisfaction </h1> 
+  <h2> Week 6: Assessment 6</h2>
+
+  <div class="question">
+    <h2>1) A backtracking based algorithm searching for a solution to a CSP using variable ordering [X1, X2, ..., Xn] reaches a dead-end at variable Xi. This point is marked as an internal dead-end if</h2>
+    <ul class="options">
+      <li class="correct">the domain of Xi has one or more values left to try</li>
+      <li>the domain of Xi has no value left to try</li>
+      <li>in the previous round it tried a value for Xi and succeeded</li>
+      <li>in the previous round it tried a value for Xi and failed</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>2) Which of the following statements are true about learning based algorithms?</h2>
+    <ul class="options">
+      <li class="correct">Cost of learning process can be significant in comparison to the size of the problem under consideration.</li>
+      <li class="correct">Such algorithms are designed to increase computing during the current and subsequent runs.</li>
+      <li class="correct">Learning based algorithms can learn partial solutions, which are extended in subsequent runs.</li>
+      <li class="correct">All of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>3) Gaschnig's Backjumping algorithm starts processing the constraint network in Figure 1 with the partial solution {X1=c, X2=b}. With input d corresponding to the given ordering and will arrive at a deadend on variable ________</h2>
+    <ul class="options"> 
+      <li class="correct">X4</li>
+      <li>X5</li>
+      <li>X6</li>
+      <li>X7</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>4) The deadend variable in the previous question is ________</h2>
+    <ul class="options">
+      <li class="correct">a leaf deadend</li>
+      <li>an internal deadend</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>5) In Question 3, where Gaschnig's Backjumping arrived at a deadend, the culprit variable is ________</h2>
+    <ul class="options">
+      <li>X1</li>
+      <li class="correct">X2</li>
+      <li>X3</li>
+      <li>X4</li>
+      <li>X5</li>
+      <li>X6</li>
+      <li>X7</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>6) After jumping back to the culprit variable (identified in Question 5), Gaschnig's Backjumping algorithm finds that ________</h2>
+    <ul class="options">
+      <li>The culprit variable's domain is empty</li>
+      <li class="correct">The culprit variable's domain is not empty</li>
+      <li>The culprit variable can be assigned a consistent value</li>
+      <li>The culprit variable cannot be assigned a consistent value</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>7) For the constraint network in Figure 1, Gaschnig's Backjumping arrives at a deadend on X7 which is conflicting with {w,w,k,k,g}. The culprit variable identified by the algorithm is ________</h2>
+    <ul class="options">
+      <li>X1</li>
+      <li>X2</li>
+      <li>X3</li>
+      <li>X4</li>
+      <li>X5</li>
+      <li class="correct">X6</li>
+      <li>X7</li>
+      <li>none of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>8) For the constraint network in Figure 1, Conflict Directed Backjumping arrives at a deadend on variable X6 which is conflicting with {w,w,k,k,g}. The culprit variable identified by the algorithm is ________</h2>
+    <ul class="options">
+      <li>X1</li>
+      <li>X2</li>
+      <li>X3</li>
+      <li>X4</li>
+      <li>X5</li>
+      <li class="correct">X6</li>
+      <li>X7</li>
+      <li>none of the above</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>9) Let us assume that a deadend occurs at E, and E is a leaf deadend. How many elements exist in the induced ancestors set for E?</h2>
+    <ul class="options">
+      <li class="correct">3</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>10) Consider a partial assignment A = {t,b,b,a,g}. Which node is/are parent(s) of A?</h2>
+    <ul class="options">
+      <li class="correct">A</li>
+      <li class="correct">B</li>
+      <li>C</li>
+      <li class="correct">D</li>
+      <li>E</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>11) Which of the following are relevant deadends for E?</h2>
+    <ul class="options">
+      <li>A</li>
+      <li class="correct">B</li>
+      <li>C</li>
+      <li class="correct">D</li>
+      <li class="correct">E</li>
+      <li>F</li>
+      <li>G</li>
+    </ul>
+  </div>
+
+  <div class="question">
+    <h2>12) Let D be the internal deadend variable with relevant deadend set as Y={D,E,G}. To which variable the algorithm can safely jump back to?</h2>
+    <ul class="options">
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li class="correct">D</li>
+      <li>E</li>
+      <li>F</li>
+      <li>G</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Reference: Based on Course Assignment.</p>
+  </footer>
+</body>
+</html>
