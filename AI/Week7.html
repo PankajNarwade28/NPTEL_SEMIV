@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validated CSP Assignment Answers - Week 7</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1> AI: Constraint Satisfaction </h1> 
+  <h2> Week 7: Assessment 7</h2>
+
+  <div class="question">
+    <h2>1) What is the space of diagnosis of a system?</h2>
+    <ul class="options">
+      <li>All components in the system</li>
+      <li>Components participating in faults</li>
+      <li>Components leading to outputs</li>
+      <li class="correct">Powerset of all the components</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1061, 1104]</p>
+  </div>
+
+  <div class="question">
+    <h2>2) Which of the following statements is true about the Hitting set (HS) for a given set of sets S = {S1, S2, ..., Sn}?</h2>
+    <ul class="options">
+      <li class="correct">A HS must contain a component from each of S</li>
+      <li>A HS contains components only from some of S</li>
+      <li class="correct">A HS is minimal if it does not have a proper subset that is also a HS</li>
+      <li>Not every HS needs to be minimal</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1061, 1104]</p>
+  </div>
+
+  <div class="question">
+    <h2>3) Benefit of introducing fault modes:</h2>
+    <ul class="options">
+      <li class="correct">Reduces the space of fault localization by cutting down on spurious faults</li>
+      <li>Increases the diagnostic accuracy by considering all possible failure types</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1061, 1063]</p>
+  </div>
+
+  <div class="question">
+    <h2>4) A model used in model based diagnosis constitutes of</h2>
+    <ul class="options">
+      <li>behaviour models of only groups of components</li>
+      <li>physical models of the individual components</li>
+      <li>a black box model of the device under consideration</li>
+      <li class="correct">a set of connections that connect different components</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1106, 1107]</p>
+  </div>
+
+  <div class="question">
+    <h2>5) A Truth Maintenance System (TMS) is</h2>
+    <ul class="options">
+      <li>keeps track of all the true statements in a story</li>
+      <li class="correct">a program that does the book keeping and consistency management for a problem solver</li>
+      <li>a program that adds new values to maintain the truth value of the premises</li>
+      <li>a program that routinely deletes false statements from a knowledge base</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1112, 1116]</p>
+  </div>
+
+  <div class="question">
+    <h2>6) According to Jon Doyle the term Truth Maintenance System is probably a misnomer. An alternative he suggests is</h2>
+    <ul class="options">
+      <li>Truth Destruction System</li>
+      <li>Falsity Destruction System</li>
+      <li class="correct">Reason Maintenance System</li>
+      <li>Truth Evolving System</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1117, 1120]</p>
+  </div>
+
+  <div class="question">
+    <h2>7) A Truth Maintenance System (TMS) can</h2>
+    <ul class="options">
+      <li class="correct">keep a watch on the consistency of the beliefs of an agent</li>
+      <li>add new beliefs that are consistent with the beliefs held by the agent</li>
+      <li class="correct">can help identify the source of inconsistency of beliefs held by an agent</li>
+      <li>can clean up the justifications to make all beliefs true</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1130, 1131, 1132]</p>
+  </div>
+
+  <div class="question">
+    <h2>8) For the multiplier-adder circuit (M1, M2, M1; A1, A2) based on the inconsistency observed in the value of F1, which of the following is a conflict set?</h2>
+    <ul class="options">
+      <li>M1, M2, M3</li>
+      <li>A1, A2</li>
+      <li class="correct">M1, M2, A1</li>
+      <li>M2, M3, A2</li>
+      <li>A1, A2, M3</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1161, 1166]</p>
+  </div>
+
+  <div class="question">
+    <h2>9) Given the conflict set in Question 8, which of the following cannot be a single fault?</h2>
+    <ul class="options">
+      <li>A1</li>
+      <li class="correct">A2</li>
+      <li>M1</li>
+      <li>M2</li>
+      <li class="correct">M3</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1169, 1170, 1171]</p>
+  </div>
+
+  <div class="question">
+    <h2>10) Given the conflict set in Question 8, which of the following cannot be a double fault?</h2>
+    <ul class="options">
+      <li>A1, A2</li>
+      <li>A1, M1</li>
+      <li>A1, M2</li>
+      <li>M1, M2</li>
+      <li>A2, M2</li>
+      <li class="correct">A2, M3</li>
+      <li>M2, M3</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1179, 1180]</p>
+  </div>
+
+  <div class="question">
+    <h2>11) Propagate F1 value to discover another conflict set</h2>
+    <ul class="options">
+      <li>M1, M2, M3, A1, A2</li>
+      <li>M1, M2, A1, A2</li>
+      <li class="correct">M1, M3, A1, A2</li>
+      <li>M1, M2, M3</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1188, 1189]</p>
+  </div>
+
+  <div class="question">
+    <h2>12) In model based diagnosis fault modes can be instrumental in</h2>
+    <ul class="options">
+      <li>identifying the faulty components</li>
+      <li>identifying which components can fail</li>
+      <li class="correct">eliminating spurious candidates in diagnosis</li>
+      <li>explain why a component failed</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 1197, 1198]</p>
+  </div>
+
+  <footer>
+    <p>Reference: Based on NPTEL AI: Constraint Satisfaction Week 7 Course Assignment.</p>
+  </footer>
+</body>
+</html>
