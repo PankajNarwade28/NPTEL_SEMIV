@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validated CSP Assignment Answers - Week 8</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1> AI: Constraint Satisfaction </h1> 
+  <h2> Week 8: Assessment 8</h2>
+
+  <div class="question">
+    <h2>1) If the Blocks World problem is solved as DCSP, which of the following are the initial set of constraints that denote the active propositions?</h2>
+    <ul class="options">
+      <li class="correct">Active(On<sub>0</sub>(C,A), On<sub>0</sub>(B,C), On<sub>0</sub>(A,B), OnTable<sub>0</sub>(D)) where 0 subscript refers to the layer in the planning graph where they occur</li>
+      <li>Active(OnTable<sub>0</sub>(C), On<sub>0</sub>(B,C), On<sub>0</sub>(A,D), OnTable<sub>0</sub>(D))</li>
+      <li>Active(On<sub>0</sub>(C,D), On<sub>0</sub>(B,C), On<sub>0</sub>(A,B), OnTable<sub>0</sub>(D))</li>
+      <li>Active(OnTable<sub>0</sub>(C), On<sub>0</sub>(B,C), On<sub>0</sub>(A,D), OnTable<sub>0</sub>(D))</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 26, 29, 31, 33, 34]</p>
+  </div>
+
+  <div class="question">
+    <h2>2) Which of the following are true about the initial state in the state variable representation?</h2>
+    <ul class="options">
+      <li class="correct">On(A, S<sub>0</sub>) = D</li>
+      <li>Clear(C, S<sub>12</sub>) = 1</li>
+      <li class="correct">Clear(A, S<sub>0</sub>) = 1</li>
+      <li>Clear(C, S<sub>0</sub>) = 0</li>
+      <li class="correct">OnTable(A, S<sub>0</sub>) = True</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 38, 42, 43, 44, 45, 49]</p>
+  </div>
+
+  <div class="question">
+    <h2>3) Which of the following constraints denote the frame axioms for the given domain?</h2>
+    <ul class="options">
+      <li class="correct">at UnStack(D, B), Clear(C, S<sub>0</sub>) = 1 &rarr; Clear(C, S<sub>1</sub>) = 1</li>
+      <li class="correct">at UnStack(A, D), On(B, C, S<sub>0</sub>) = 1 &rarr; On(B, C, S<sub>1</sub>) = 1</li>
+      <li>at PickUp(A), Clear(C, S<sub>0</sub>) = 1 &rarr; Clear(C, S<sub>1</sub>) = 0</li>
+      <li>at PickUp(A), On(B, C, S<sub>0</sub>) = 1 &rarr; On(B, C, S<sub>1</sub>) = 0</li>
+      <li class="correct">at PickUp(A), On(B, C, S<sub>0</sub>) = 1 &rarr; On(B, C, S<sub>1</sub>) = 1</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 52, 55, 57, 60, 62, 63]</p>
+  </div>
+
+  <div class="question">
+    <h2>4) Which of the following formulas are a valid encoding of actions as clauses in SAT?</h2>
+    <ul class="options">
+      <li class="correct">UnStack(B, C, t) &rarr; On(B, C, t-1) &and; ArmEmpty(t-1) &and; Clear(B, t-1)</li>
+      <li>Stack(A, B, t) &rarr; Holding(A, t-1) &and; Clear(B, t-1)</li>
+      <li class="correct">Stack(A, B, t) &rarr; On(A, B, t) &and; ArmEmpty(t) &and; Clear(C, t-1)</li>
+      <li class="correct">Stack(B, C, t) &rarr; On(B, C, t) &and; ArmEmpty(t) &and; OnTable(C, t-1)</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 66, 70, 76, 77, 78]</p>
+  </div>
+
+  <div class="question">
+    <h2>5) Which of the following formulas denote pairs of mutex actions while encoding the planning graph as SAT?</h2>
+    <ul class="options">
+      <li class="correct">&not;UnStack(B, C, t) &or; &not;UnStack(A, D, t)</li>
+      <li>UnStack(B, C, 0) &or; UnStack(A, D, 0)</li>
+      <li class="correct">UnStack(B, C, 0) &and; UnStack(A, D, 0) &rarr; False</li>
+      <li class="correct">&not;UnStack(B, C, t) &or; &not;PickUp(A, t)</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 79, 81, 82, 88, 89]</p>
+  </div>
+
+  <div class="question">
+    <h2>6) For the STRIPS planning domain, which is/are NOT true?</h2>
+    <ul class="options">
+      <li>Action can only be instantaneous</li>
+      <li class="correct">Action preconditions could have preferences</li>
+      <li class="correct">Actions can have probabilistic effects</li>
+      <li class="correct">World can change on its own (e.g., sun is moving from east to west)</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 91, 94, 97, 100, 101]</p>
+  </div>
+
+  <div class="question">
+    <h2>7) Which of the following are true about the Graphplan algorithm?</h2>
+    <ul class="options">
+      <li>It is a state space planning algorithm</li>
+      <li>It is a plan space planning algorithm</li>
+      <li class="correct">The algorithm builds a planning graph, which consists of alternate layers of propositions and actions</li>
+      <li class="correct">The algorithm expands the planning-graph till all goal predicates are present non-mutex in the latest layer</li>
+      <li class="correct">The plan is found in the expanded planning graph via the use of backtracking algorithms</li>
+      <li class="correct">Graphplan uses mutex between actions and propositions in a layer to denote that both elements cannot hold true simultaneously</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 104, 107, 108, 114, 115, 118, 119]</p>
+  </div>
+
+  <div class="question">
+    <h2>8) The space of plan space planning consists of:</h2>
+    <ul class="options">
+      <li class="correct">Partial plans (incomplete plans)</li>
+      <li>Partial states</li>
+      <li>Propositions and actions arranged in layers</li>
+      <li class="correct">Propositions and actions connected by causal links</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 120, 122, 123, 124, 125]</p>
+  </div>
+
+  <div class="question">
+    <h2>9) Which of the following statements are true?</h2>
+    <ul class="options">
+      <li class="correct">Plan space planning does not commit to the plan step ordering when adding actions</li>
+      <li class="correct">State space planning commits to the plan step ordering</li>
+      <li>Plan space planning commits to the plan step ordering</li>
+      <li class="correct">State space planning suffers from goal ordering</li>
+      <li class="correct">Plan space planning uses causal links to denote the effect of an action which supplies a precondition of some other action</li>
+    </ul>
+    <p class="source-cite">Source: [cite: 126, 129, 132, 133, 135, 137]</p>
+  </div>
+
+  <footer>
+    <p>Reference: Based on NPTEL AI: Constraint Satisfaction Week 8 Course Assignment.</p>
+  </footer>
+</body>
+</html>
